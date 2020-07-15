@@ -8,17 +8,51 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+    #tacosign {
+      height: 640px;
+      width: 568px;
+  
+    }
+    #steaktaco {
+      height: 640px;
+      width: 568px;
+  
+    }
+    #streettaco {
+      height: 640px;
+      width: 568px;
+  
+    }
+  
+  </style>
+  
 
 </head>
 <body>
 
   <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron mainpagejumbo">
       <h1>Dude's Tacos</h1>
       <h3>Make your reservation</h3>
       <hr>
-      <a href="/viewTables"><button class="btn btn-primary btn-lg" id="view-tables"><span class="fa fa-eye"></span> View Tables</button></a>
-      <a href="/makeReservation"><button class="btn btn-danger btn-lg" id="make-resy"><span class="fa fa-eye"></span> Make Reservation</button></a>
+      <a href="/viewTables"><button class="btn btn-outline-dark" id="view-tables"><span class="fa fa-list"></span> View Tables</button></a>
+      <a href="/makeReservation"><button class="btn btn btn-outline-danger" id="make-resy"><span class="fa fa-pencil"></span> Make Reservation</button></a>
+    
+    </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="public/images/tacoNeonSign.jpg" class="d-block w-100" id="tacosign" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="public/images/streetTaco2.jpg" class="d-block w-100" id="streettaco" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="public/images/tacosNeonSign2.jpg" class="d-block w-100" id="steaktaco" alt="...">
+        </div>
+       
+      </div>
     </div>
 
     <footer class="footer">
