@@ -58,6 +58,7 @@ app.get("/api/waitlist", function(req, res) {
   });
 
 
+
 // // Displays a single reservation, or returns false
 // app.get("/api/reservations/:name", function(req, res) {
 //   var chosen = req.params.name;
@@ -83,7 +84,7 @@ app.post("/api/reservations", function(req, res) {
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
   newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
 
-  console.log(newReservation);
+  //console.log(newReservation);
 
 //check how long the reservations array is
 if(reservations.length >= 5) {
@@ -91,7 +92,7 @@ if(reservations.length >= 5) {
 } else {
     reservations.push(newReservation);
 }
-    res.json({response:true});
+    res.json(newReservation);
 });
 
 // Starts the server to begin listening

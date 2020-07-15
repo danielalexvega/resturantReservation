@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Make Reservations - Express</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Make Reservations - Express</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
+
 <body>
 
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Dude's Tacos</h1>
-      <h3>Make your reservation</h3>
-      <hr>
-      <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> View Tables</button></a>
-      <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> Home</button></a>
-    </div>
-
-    <div class="row">
-
-      <div class="col-12">
-
-        <div class="card">
-          <div class="card-header">
-            <h3><strong>Table Reservations</strong></h3>
-          </div>
-          <div class="card-body">
-            <form method="POST" role="form">
-
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name">
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="text" class="form-control" id="phone">
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email">
-              </div>
-
-              <div class="form-group">
-                <label for="id">Unique ID</label>
-                <input type="text" class="form-control" id="id">
-              </div>
-
-            </form>
-            <br>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Submit </button>
-            </div>
-          </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Dude's Tacos</h1>
+            <h3>Make your reservation</h3>
+            <hr>
+            <a href="/viewTables"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> View Tables</button></a>
+            <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> Home</button></a>
         </div>
 
-      </div>
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Table Reservations</strong></h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" role="form">
+
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="text" class="form-control" id="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id">Unique ID</label>
+                                <input type="text" class="form-control" id="id">
+                            </div>
+
+                        </form>
+                        <br>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span
+                                    class="fa fa-fire"></span> Submit </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script type="text/javascript">
-    // Question: What does this code do?
-    $("#add-btn").on("click", function(event) {
-      event.preventDefault();
-      var newReservation = {
-        name: $("#name").val().trim(),
-        role: $("#phone").val().trim(),
-        age: $("#email").val().trim(),
-        forcePoints: $("#id").val().trim()
-      };
+    <script type="text/javascript">
+        // Question: What does this code do?
+        $("#add-btn").on("click", function (event) {
+            event.preventDefault();
+            var newReservation = {
+                name: $("#name").val().trim(),
+                phone: $("#phone").val().trim(),
+                email: $("#email").val().trim(),
+                id: $("#id").val().trim()
+            };
 
-      // Question: What does this code do??
-      $.post("/api/reservations", newReservation)
-        .then(function(data) {
-            if(data.response){
-                //go to tables page
-                window.location.href('/viewTables');
-            }
-          console.log("add.html", data);
-          alert("Adding reservation...");
+            // Question: What does this code do??
+            $.post("/api/reservations", newReservation)
+                .then(function (data) {
+                    window.location.href = ('/viewTables');
+                    alert("Adding reservation...");
+                });
         });
-    });
-  </script>
+    </script>
 
 </body>
+
 </html>
