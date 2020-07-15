@@ -1,3 +1,20 @@
+
+/* font-family: 'Barrio', cursive;
+font-family: 'Faster One', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Sigmar One', cursive; */
+
+#customJumbotron {
+   
+}
+
+#resturantTitle{
+    font-family: 'Barrio', cursive;
+    text-align: center;
+    font-size: 76px;
+    letter-spacing: 24px;
+
 body {
     background-color: blue;
+
 }
