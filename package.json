@@ -1,0 +1,23 @@
+{
+  "name": "resturantreservation",
+  "version": "1.0.0",
+  "description": "An app the handle resturant reservations",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielalexvega/resturantReservation.git"
+  },
+  "author": "Daniel Vega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielalexvega/resturantReservation/issues"
+  },
+  "homepage": "https://github.com/danielalexvega/resturantReservation#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
