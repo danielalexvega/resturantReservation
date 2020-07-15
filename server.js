@@ -34,10 +34,6 @@ app.get("/viewTables", function(req, res) {
     res.sendFile(path.join(__dirname, "viewTables.html"));
   });
 
-app.get("/add", function(req, res) {
-    res.sendFile(path.join(__dirname, "makeReservation.html"));
-  });
-
 // Displays all reservations
 app.get("/api/reservations", function(req, res) {
   return res.json(reservations);
@@ -49,20 +45,20 @@ app.get("/api/waitlist", function(req, res) {
   });
 
 
-// Displays a single reservation, or returns false
-app.get("/api/reservations/:name", function(req, res) {
-  var chosen = req.params.name;
+// // Displays a single reservation, or returns false
+// app.get("/api/reservations/:name", function(req, res) {
+//   var chosen = req.params.name;
 
-  console.log(chosen);
+//   console.log(chosen);
 
-  for (var i = 0; i < characters.length; i++) {
-    if (chosen === characters[i].routeName) {
-      return res.json(characters[i]);
-    }
-  }
+//   for (var i = 0; i < characters.length; i++) {
+//     if (chosen === characters[i].routeName) {
+//       return res.json(characters[i]);
+//     }
+//   }
 
-  return res.json(false);
-});
+//   return res.json(false);
+// });
 
 // Create New Characters - takes in JSON input
 app.post("/api/reservations", function(req, res) {
@@ -76,9 +72,15 @@ app.post("/api/reservations", function(req, res) {
 
   console.log(newReservation);
 
-  reservations.push(newReservation);
+//check how long the reservations array is
+if(reservations.length >= 5) {
+    waitList.push(newReservation);
+} else {
+    reservations.push(newReservation);
+}
+  //console log
+  res.sendFile(path.join(__dirname, "viewTables.html"));
 
-  res.json(newReservation);
 });
 
 // Starts the server to begin listening
