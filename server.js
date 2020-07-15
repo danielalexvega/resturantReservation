@@ -11,6 +11,19 @@ var PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'));
+
+/*
+Project
+    server.js
+
+    public
+        style.css
+        images
+            logo.png   
+
+*/
+
 
 // Reservations/Wait List (DATA)
 // =============================================================
@@ -78,9 +91,7 @@ if(reservations.length >= 5) {
 } else {
     reservations.push(newReservation);
 }
-  //console log
-  res.sendFile(path.join(__dirname, "viewTables.html"));
-
+    res.json({response:true});
 });
 
 // Starts the server to begin listening

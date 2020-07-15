@@ -78,6 +78,10 @@
       // Question: What does this code do??
       $.post("/api/reservations", newReservation)
         .then(function(data) {
+            if(data.response){
+                //go to tables page
+                window.location.href('/viewTables');
+            }
           console.log("add.html", data);
           alert("Adding reservation...");
         });
