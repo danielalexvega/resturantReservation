@@ -1,20 +1,20 @@
-
 /* font-family: 'Barrio', cursive;
-font-family: 'Faster One', cursive;
 font-family: 'Open Sans', sans-serif;
-font-family: 'Sigmar One', cursive; */
+font-family: 'Vast Shadow', cursive; */
 
-#customJumbotron {
-   
+.mainpagejumbo {
+   padding-top: 12px;
+   padding-bottom: 12px;;
 }
 
 #resturantTitle{
-    font-family: 'Barrio', cursive;
+    font-family: 'Vast Shadow', cursive;
     text-align: center;
-    font-size: 76px;
-    letter-spacing: 24px;
+    font-size: 62px;
+    letter-spacing: 12px;
 
+}
 body {
-    background-color: blue;
+    background-color: #C6AC8F;
 
 }

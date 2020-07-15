@@ -1,80 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Dude's Tacos</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Faster+One&family=Open+Sans:wght@300;400&family=Sigmar+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <style>
-    #tacosign {
-      height: 640px;
-      width: 568px;
-  
-    }
-    #steaktaco {
-      height: 640px;
-      width: 568px;
-  
-    }
-    #streettaco {
-      height: 640px;
-      width: 568px;
-  
-    }
-  
-  </style>
-  
+    <meta charset="UTF-8">
+    <title>Dude's Tacos</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Open+Sans:wght@300;400&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
 
 </head>
+
 <body>
-
-  <div class="container">
-
-
     <div class="jumbotron mainpagejumbo">
-      <h1 id="resturantTitle">Dude's Tacos</h1>
-
-      <h3>Make your reservation</h3>
-      <hr>
-      <a href="/viewTables"><button class="btn btn-outline-dark" id="view-tables"><span class="fa fa-list"></span> View Tables</button></a>
-      <a href="/makeReservation"><button class="btn btn btn-outline-danger" id="make-resy"><span class="fa fa-pencil"></span> Make Reservation</button></a>
-    
-    </div>
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="public/images/tacoNeonSign.jpg" class="d-block w-100" id="tacosign" alt="...">
+        <h1 id="resturantTitle">DUDE'S TACOS</h1>
+        <div>
+            <a href="/viewTables"><button class="btn btn-outline-dark" id="view-tables"><span class="fa fa-list"></span>
+                    View Tables</button></a>
+            <a href="/makeReservation"><button class="btn btn btn-outline-danger" id="make-resy"><span
+                        class="fa fa-pencil"></span> Make Reservation</button></a>
         </div>
-        <div class="carousel-item">
-          <img src="public/images/streetTaco2.jpg" class="d-block w-100" id="streettaco" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="public/images/tacosNeonSign2.jpg" class="d-block w-100" id="steaktaco" alt="...">
-        </div>
-       
-      </div>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-          
-            <p>
-                <a href="/api/reservations">API Table Link</a>
-                |
-                <a href="/api/waitlist">API Wait List</a>
-            </p>
-         
-            </div>
-            </footer>
-            
-            </div>
+    <div class="container">
 
-        
-            </body>
-            </html>
-   
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/tacoNeonSign.jpg" class="d-block w-100" id="tacosign" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/hotTacosSign.jpg" class="d-block w-100" id="streettaco" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/tacosNeonSign2.jpg" class="d-block w-100" id="steaktaco" alt="...">
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/api/reservations">API Table Link</a>|<a href="/api/waitlist">API Wait List</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
