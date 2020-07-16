@@ -13,28 +13,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-/*
-Project
-    server.js
-
-    public
-        style.css
-        images
-            logo.png   
-
-*/
-
-
 // Reservations/Wait List (DATA)
 // =============================================================
 var reservations = [];
-
 var waitList = [];
 
 // Routes
 // =============================================================
 
-// Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "view.html"));
 });
@@ -56,8 +42,6 @@ app.get("/api/reservations", function(req, res) {
 app.get("/api/waitlist", function(req, res) {
     return res.json(waitList);
   });
-
-
 
 // // Displays a single reservation, or returns false
 // app.get("/api/reservations/:name", function(req, res) {
@@ -84,9 +68,6 @@ app.post("/api/reservations", function(req, res) {
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
   newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
 
-  //console.log(newReservation);
-
-//check how long the reservations array is
 if(reservations.length >= 5) {
     waitList.push(newReservation);
 } else {

@@ -2,9 +2,23 @@
 font-family: 'Open Sans', sans-serif;
 font-family: 'Vast Shadow', cursive; */
 
+/*
+Khaki Web: C6AC8F
+Golden Brown: A76A25
+International Orange Engineering: BB1D11
+Eerie Black: 151616
+Castleton Green: 0E5838
+*/
+
 .mainpagejumbo {
    padding-top: 12px;
-   padding-bottom: 12px;;
+   padding-bottom: 12px;
+   background-color: #151616;
+}
+
+#logo {
+    display: block;
+    margin: 10px auto;
 }
 
 #resturantTitle{
