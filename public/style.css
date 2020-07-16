@@ -48,3 +48,6 @@ body {
     width: 80%;
 }
 
+.carousel-item {
+    height: 540px;
+}
