@@ -38,7 +38,7 @@
                         <h4>Current Reservations</h4>
                     </div>
                     <div class="card-body">
-                        <ul id="tableList" class="list-group"></ul>
+                        <ul id="tableList" class="list-group" style="font-family: 'Raleway', sans-serif;"></ul>
                     </div>
                 </div>
           
@@ -50,11 +50,12 @@
                         <ul id="waitList" class="list-group"></ul>
                     </div>
                 </div>
+
             </div>
         </div>
     
     </div>
-</div>
+
 <footer class="footer text-center">
 
     <div class="apis">
@@ -77,10 +78,10 @@
                         listItem.append(
                             $("<h3>").text("Table #" + (i + 1)),
                             $("<hr>"),
-                            $("<h3>").text("ID:" + tableData[i].id),
-                            $("<h3>").text("Name: " + tableData[i].name),
-                            $("<h3>").text("Email: " + tableData[i].email),
-                            $("<h3>").text("Phone: " + tableData[i].phone),
+                            $("<p>").text("ID:" + tableData[i].id),
+                            $("<p>").text("Name: " + tableData[i].name),
+                            $("<p>").text("Email: " + tableData[i].email),
+                            $("<p>").text("Phone: " + tableData[i].phone),
                         );
                         tableList.append(listItem);
                     }
