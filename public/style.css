@@ -48,3 +48,7 @@ body {
     width: 80%;
 }
 
+.list-group-item {
+    font-family: 'Raleway', sans-serif;
+}
+
