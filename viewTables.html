@@ -7,6 +7,10 @@
     <title>View Tables</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barrio&family=Open+Sans:wght@300;400&family=Vast+Shadow&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
@@ -14,16 +18,15 @@
 
 <body>
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="text-center">
-                <span class="fa fa-fire"></span>
-                Dude's Tacos
-            </h1>
-            <hr>
-            <h2 class="text-center">Current Reservations & Waiting List</h2>
-            <br>
+        <div class="jumbotron mainpagejumbo">
+            <img src="images/resizeLogo3.png" alt="logo" id="logo">
+
+
+           <!-- <h2 class="text-center">Current Reservations & Waiting List</h2> -->
+           
             <div class="text-center">
-                <a href="/makeReservation"><button class="btn btn btn-outline-danger" id="make-resy"><span class="fa fa-pencil"></span> Make Reservation</button></a>
+                <a href="/makeReservation"><button class="btn btn btn-outline-danger" id="make-resy"><span
+                            class="fa fa-pencil"></span> Make Reservation</button></a>
                 <a href="/"><button class="btn btn-outline-success"><span class="fa fa-home"></span> Home</button></a>
             </div>
         </div>
@@ -55,7 +58,7 @@
                 <p>Control Panel</p>
                 <p>
                     <a href="/api/reservations"> API Table</a>
-                     | 
+                    |
                     <a href="/api/waitlist">API Wait List</a>
                 </p>
             </div>
