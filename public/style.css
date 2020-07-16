@@ -1,20 +1,41 @@
-
 /* font-family: 'Barrio', cursive;
-font-family: 'Faster One', cursive;
 font-family: 'Open Sans', sans-serif;
-font-family: 'Sigmar One', cursive; */
+font-family: 'Vast Shadow', cursive; */
 
-#customJumbotron {
-   
+/*
+Khaki Web: C6AC8F
+Golden Brown: A76A25
+International Orange Engineering: BB1D11
+Eerie Black: 151616
+Castleton Green: 0E5838
+*/
+
+.mainpagejumbo {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   background-color: #151616;
+}
+
+#logo {
+    display: block;
+    margin: 10px auto;
+}
+
+.btn-outline-dark {
+    color: #ffffff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #343a40;
 }
 
 #resturantTitle{
-    font-family: 'Barrio', cursive;
+    font-family: 'Vast Shadow', cursive;
     text-align: center;
-    font-size: 76px;
-    letter-spacing: 24px;
+    font-size: 62px;
+    letter-spacing: 12px;
 
+}
 body {
-    background-color: blue;
+    background-color: #C6AC8F;
 
 }

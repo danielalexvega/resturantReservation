@@ -13,17 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
-/*
-Project
-    server.js
-
-    public
-        style.css
-        images
-            logo.png   
-
-*/
-
 
 // Reservations/Wait List (DATA)
 // =============================================================
