@@ -21,6 +21,13 @@ Castleton Green: 0E5838
     margin: 10px auto;
 }
 
+.btn-outline-dark {
+    color: #ffffff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #343a40;
+}
+
 #resturantTitle{
     font-family: 'Vast Shadow', cursive;
     text-align: center;

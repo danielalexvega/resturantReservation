@@ -7,6 +7,8 @@
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Open+Sans:wght@300;400&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
@@ -15,21 +17,19 @@
 <body>
 
     <div class="container">
-        <div class="jumbotron">
-            <h1>Dude's Tacos</h1>
-            <h3>Make your reservation</h3>
-            <hr>
+        <div class="jumbotron mainpagejumbo">
+            <img src="images/resizeLogo3.png" alt="logo" id="logo">
             <a href="/viewTables"><button class="btn btn-outline-dark" id="view-tables"><span class="fa fa-list"></span> View Tables</button></a>
             <a href="/"><button class="btn btn-outline-success"><span class="fa fa-home"></span> Home</button></a>
         </div>
-
+        
         <div class="row">
 
             <div class="col-12">
 
                 <div class="card">
                     <div class="card-header">
-                        <h3><strong>Table Reservations</strong></h3>
+                        <h3><strong>Make a reservation</strong></h3>
                     </div>
                     <div class="card-body">
                         <form method="POST" role="form">
