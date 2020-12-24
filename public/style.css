@@ -46,3 +46,17 @@ body {
 #custom-carousel {
     max-height: 600px;
 }
+
+
+.makeresylist {
+    width: 80%;
+}
+
+.viewtableslist {
+    width: 80%;
+}
+
+.list-group-item {
+    font-family: 'Raleway', sans-serif;
+}
+
