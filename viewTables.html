@@ -22,8 +22,8 @@
             <img src="images/resizeLogo3.png" alt="logo" id="logo">
 
 
-           <!-- <h2 class="text-center">Current Reservations & Waiting List</h2> -->
-           
+            <!-- <h2 class="text-center">Current Reservations & Waiting List</h2> -->
+
             <div class="text-center">
                 <a href="/makeReservation"><button class="btn btn btn-outline-danger" id="make-resy"><span
                             class="fa fa-pencil"></span> Make Reservation</button></a>
@@ -33,7 +33,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="card">
+                <div class="card" id='reservationTable'>
                     <div class="card-header">
                         <h4>Current Reservations</h4>
                     </div>
@@ -68,22 +68,8 @@
     <script type="text/javascript">
         function runTableQuery() {
             $.ajax({ url: "/api/reservations", method: "GET" })
-                .then(function (tableData) {
-
-                    for (var i = 0; i < tableData.length; i++) {
-                        var tableList = $("#tableList");
-                        var listItem = $("<li class='list-group-item mt-4'>");
-
-                        listItem.append(
-                            $("<h3>").text("Table #" + (i + 1)),
-                            $("<hr>"),
-                            $("<h3>").text("ID:" + tableData[i].id),
-                            $("<h3>").text("Name: " + tableData[i].name),
-                            $("<h3>").text("Email: " + tableData[i].email),
-                            $("<h3>").text("Phone: " + tableData[i].phone),
-                        );
-                        tableList.append(listItem);
-                    }
+                .then(function(tableData) {
+                    renderReservations (tableData);
                 });
         }
 
@@ -108,8 +94,60 @@
                 })
         }
 
+
+        //add listening on the btns
+        //console.log the btn id
+        //relate that to the array
+
+        //add an event
+        //click listener on dynamically create elements 
+       
+
+        $('#reservationTable').on('click', (event) => {
+            event.preventDefault();
+            if(event.target.nodeName === 'BUTTON'){
+                console.log(event.target.id);
+                $.post(`/api/reservations/${event.target.id}`, event.target.id)
+                .then(function(data) {
+                    console.log('got here');
+                });
+
+                // $.ajax({ url: `/api/reservations/${event.target.id}` , method: 'POST' })
+                //     .then(function(tableData) {
+                //         console.log('got here');
+                //     });
+            }
+
+
+
+                //huge assumption that delete returns data
+
+        });
+
+
         runTableQuery();
         runWaitListQuery();
+
+
+        function renderReservations(tableData) {
+
+            for (var i = 0; i < tableData.length; i++) {
+                var tableList = $("#tableList");
+                var listItem = $("<li class='list-group-item mt-4'>");
+
+                listItem.append(
+                    $("<h3>").text("Table #" + (i + 1)),
+                    $("<hr>"),
+                    $("<h3>").text("ID:" + tableData[i].id),
+                    $("<h3>").text("Name: " + tableData[i].name),
+                    $("<h3>").text("Email: " + tableData[i].email),
+                    $("<h3>").text("Phone: " + tableData[i].phone),
+                    $('<button>').text('Cancel reservation').attr('class', 'btn btn-danger cancelBtn')
+                        .attr('id', i)
+                );
+                tableList.append(listItem);
+            }
+        }
 
     </script>
 
